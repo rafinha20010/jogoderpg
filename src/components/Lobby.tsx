@@ -19,7 +19,7 @@ export default function Lobby({ gameState, myId, onJoin }: Props) {
     <div className={styles.container}>
       <div className={styles.hero}>
         <div className={styles.runes}>⚔ ✦ ⚔ ✦ ⚔</div>
-        <h1 className={styles.title}>REALM OF SHADOWS</h1>
+        <h1 className={styles.title}>YARD OF SPIRITS</h1>
         <p className={styles.subtitle}>RPG Multiplayer em Turnos</p>
         <div className={styles.runes}>✦ ◆ ✦ ◆ ✦</div>
       </div>
