@@ -154,7 +154,7 @@ export default function UltCutscene({ ult, onComplete }: UltCutsceneProps) {
         <div>
           {isBossUlt ? (
             <>
-              <div style={{ fontFamily: '"Cinzel", serif', fontSize: 11, color: '#e74c3c', letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: 2 }}>
+              <div style={{ fontFamily: '"Cinzel", serif', fontSize: 11, color: '#ff5e5e', letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: 2 }}>
                 ⚠️ BOSS ULTIMATE
               </div>
               <div style={{ fontFamily: '"Cinzel", serif', fontSize: 20, color: '#fff', letterSpacing: '0.1em' }}>

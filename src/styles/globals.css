@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
   --bg-deepest: #030303;
@@ -37,8 +37,8 @@
   --mp-color: #c73a44;
   --xp-color: #c3353b;
 
-  --font-display: 'Cinzel', serif;
-  --font-body: 'Crimson Text', serif;
+  --font-display: 'Uncial Antiqua', serif;
+  --font-body: 'Gentium Book Plus', serif;
   --font-ui: system-ui, sans-serif;
 
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.6);
@@ -63,6 +63,9 @@ html, body {
   line-height: 1.5;
   min-height: 100vh;
   overflow-x: hidden;
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(100, 10, 10, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(150, 20, 20, 0.06) 0%, transparent 50%);
 }
 
 h1, h2, h3, h4 {
@@ -111,4 +114,9 @@ button {
   0% { transform: scale(1); }
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
+}
+
+@keyframes floatRune {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.4; }
+  50% { transform: translateY(-12px) rotate(5deg); opacity: 0.8; }
 }

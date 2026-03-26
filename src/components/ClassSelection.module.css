@@ -2,7 +2,9 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--bg-deepest);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(100, 10, 10, 0.12) 0%, transparent 50%),
+    var(--bg-deepest);
   padding: 24px;
 }
 
@@ -12,9 +14,9 @@
 }
 
 .title {
-  font-size: clamp(22px, 4vw, 32px);
-  color: var(--text-gold);
-  letter-spacing: 0.1em;
+  font-size: clamp(20px, 3.5vw, 30px);
+  color: var(--text-gold-bright);
+  letter-spacing: 0.12em;
 }
 
 .subtitle {
@@ -36,7 +38,7 @@
 
 .card {
   position: relative;
-  background: var(--bg-panel);
+  background: linear-gradient(135deg, rgba(30, 15, 15, 0.97) 0%, rgba(18, 10, 10, 0.99) 100%);
   border: 2px solid var(--border-dim);
   border-radius: 12px;
   padding: 16px;
@@ -51,34 +53,33 @@
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: var(--cls-color, var(--accent-gold));
-  opacity: 0.6;
+  background: var(--cls-color, var(--accent-red-bright));
+  opacity: 0.7;
   transition: opacity 0.2s;
 }
 
 .card:hover:not(.takenCard) {
   border-color: var(--cls-color, var(--border-bright));
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,50,50,0.1);
 }
 
 .card:hover::before { opacity: 1; }
 
-/* Taken (locked) card */
 .takenCard {
   cursor: not-allowed;
-  opacity: 0.55;
-  filter: grayscale(0.6);
+  opacity: 0.5;
+  filter: grayscale(0.7);
 }
 
 .takenCard::before {
   background: var(--border-dim) !important;
-  opacity: 0.3 !important;
+  opacity: 0.2 !important;
 }
 
 .selected {
-  border-color: var(--cls-color, var(--accent-gold)) !important;
-  box-shadow: 0 0 0 1px var(--cls-color, var(--accent-gold)), 0 8px 30px rgba(0,0,0,0.6);
+  border-color: var(--cls-color, var(--accent-red-bright)) !important;
+  box-shadow: 0 0 0 1px var(--cls-color, var(--accent-red-bright)), 0 10px 32px rgba(0,0,0,0.7) !important;
 }
 
 .selected::before { opacity: 1 !important; }
@@ -94,9 +95,9 @@
 
 .className {
   font-family: var(--font-display);
-  font-size: 15px;
-  color: var(--cls-color, var(--text-gold));
-  letter-spacing: 0.08em;
+  font-size: 14px;
+  color: var(--cls-color, var(--text-gold-bright));
+  letter-spacing: 0.1em;
   margin-bottom: 3px;
 }
 
@@ -131,7 +132,7 @@
 .statTrack {
   flex: 1;
   height: 5px;
-  background: var(--bg-dark);
+  background: rgba(10, 8, 20, 0.8);
   border-radius: 3px;
   overflow: hidden;
 }
@@ -161,14 +162,14 @@
   align-items: center;
   gap: 7px;
   padding: 4px 7px;
-  background: var(--bg-dark);
+  background: rgba(10, 8, 22, 0.6);
   border-radius: 5px;
   font-size: 12px;
 }
 
 .specialSkill {
-  border: 1px solid rgba(212,160,23,0.25);
-  background: rgba(212,160,23,0.04);
+  border: 1px solid rgba(153, 51, 221, 0.2);
+  background: rgba(100, 30, 160, 0.06);
 }
 
 .skillName {
@@ -182,7 +183,7 @@
   font-family: var(--font-ui);
   font-size: 10px;
   color: var(--mp-color);
-  background: rgba(52,152,219,0.1);
+  background: rgba(102, 68, 204, 0.12);
   padding: 1px 4px;
   border-radius: 3px;
   white-space: nowrap;
@@ -203,7 +204,7 @@
   font-family: var(--font-ui);
   font-size: 10px;
   padding: 2px 7px;
-  background: var(--cls-color, var(--accent-gold));
+  background: var(--cls-color, var(--accent-purple-bright));
   color: var(--bg-deepest);
   border-radius: 4px;
   font-weight: 700;
@@ -231,7 +232,7 @@
   align-items: center;
   gap: 6px;
   padding: 5px 10px;
-  background: var(--bg-panel);
+  background: rgba(25, 20, 45, 0.8);
   border: 1px solid var(--border-dim);
   border-radius: 20px;
   font-size: 13px;
@@ -253,10 +254,10 @@
 
 .readyBtn {
   padding: 13px 28px;
-  background: linear-gradient(135deg, #8b6914, #d4a017);
+  background: linear-gradient(135deg, #4a1a7a, #9933dd);
   border: none;
   border-radius: 8px;
-  color: var(--bg-deepest);
+  color: #f0e8ff;
   font-family: var(--font-display);
   font-size: 14px;
   font-weight: 700;
@@ -267,9 +268,9 @@
 }
 
 .readyBtn:hover:not(:disabled) {
-  background: linear-gradient(135deg, #d4a017, #f0c040);
+  background: linear-gradient(135deg, #6622aa, #bb44ff);
   transform: translateY(-1px);
-  box-shadow: var(--glow-gold);
+  box-shadow: 0 0 20px rgba(153, 51, 221, 0.5);
 }
 
-.readyBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+.readyBtn:disabled { opacity: 0.35; cursor: not-allowed; }

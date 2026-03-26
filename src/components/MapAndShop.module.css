@@ -68,9 +68,9 @@
 }
 
 .mapCard:hover:not(.locked) {
-  border-color: var(--text-gold);
+  border-color: var(--accent-red-bright);
   transform: translateY(-3px);
-  box-shadow: var(--glow-gold), var(--shadow-lg);
+  box-shadow: var(--glow-red), var(--shadow-lg);
 }
 
 .locked {
@@ -166,8 +166,8 @@
 .victoryBanner {
   font-family: var(--font-display);
   font-size: 18px;
-  color: var(--accent-gold-bright);
-  text-shadow: 0 0 20px rgba(212,160,23,0.5);
+  color: var(--accent-red-bright);
+  text-shadow: 0 0 20px rgba(255,50,50,0.5);
   margin-bottom: 8px;
   letter-spacing: 0.08em;
   animation: pulse 2s ease-in-out infinite;
@@ -175,7 +175,7 @@
 
 .nextMapBtn {
   padding: 14px 28px;
-  background: linear-gradient(135deg, #1a6b2a, #27ae60);
+  background: linear-gradient(135deg, #7b1f2f, #ab2f33);
   border: none;
   border-radius: 8px;
   color: white;
@@ -189,9 +189,9 @@
 }
 
 .nextMapBtn:hover {
-  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  background: linear-gradient(135deg, #ab2f33, #cf484c);
   transform: translateY(-1px);
-  box-shadow: 0 0 20px rgba(39,174,96,0.4);
+  box-shadow: 0 0 20px rgba(200,40,40,0.4);
 }
 
 .readySection {
@@ -365,10 +365,10 @@
 
 .buyBtn {
   padding: 6px 14px;
-  background: linear-gradient(135deg, #8b6914, #d4a017);
+  background: linear-gradient(135deg, #7b1f2f, #b82e35);
   border: none;
   border-radius: 6px;
-  color: var(--bg-deepest);
+  color: #fdf5f5;
   font-family: var(--font-display);
   font-size: 12px;
   font-weight: 700;
@@ -376,16 +376,16 @@
   transition: all 0.2s;
 }
 
-.buyBtn:hover:not(:disabled) { background: linear-gradient(135deg, #d4a017, #f0c040); }
+.buyBtn:hover:not(:disabled) { background: linear-gradient(135deg, #b82e35, #ec4a55); }
 .buyBtn:disabled { opacity: 0.4; cursor: not-allowed; }
 
 .consumableBadge {
   font-family: var(--font-ui);
   font-size: 10px;
   padding: 1px 5px;
-  background: rgba(39,174,96,0.15);
-  border: 1px solid rgba(39,174,96,0.3);
-  color: var(--accent-green-bright);
+  background: rgba(200,40,40,0.15);
+  border: 1px solid rgba(255,50,50,0.3);
+  color: var(--accent-red-bright);
   border-radius: 3px;
   margin-left: 6px;
   vertical-align: middle;
@@ -395,9 +395,9 @@
   font-family: var(--font-ui);
   font-size: 12px;
   padding: 2px 7px;
-  background: rgba(39,174,96,0.15);
-  border: 1px solid rgba(39,174,96,0.3);
-  color: var(--accent-green-bright);
+  background: rgba(200,40,40,0.15);
+  border: 1px solid rgba(255,50,50,0.3);
+  color: var(--accent-red-bright);
   border-radius: 4px;
   text-align: center;
 }

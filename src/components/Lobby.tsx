@@ -18,16 +18,16 @@ export default function Lobby({ gameState, myId, onJoin }: Props) {
   return (
     <div className={styles.container}>
       <div className={styles.hero}>
-        <div className={styles.runes}>⚔ ✦ ⚔ ✦ ⚔</div>
-        <h1 className={styles.title}>YARD OF SPIRITS</h1>
-        <p className={styles.subtitle}>RPG Multiplayer em Turnos</p>
         <div className={styles.runes}>✦ ◆ ✦ ◆ ✦</div>
+        <h1 className={styles.title}>Yard of Spirits</h1>
+        <p className={styles.subtitle}>Batalha em Turnos — Multijogador</p>
+        <div className={styles.runes}>⚔ ✦ ⚔ ✦ ⚔</div>
       </div>
 
       <div className={styles.content}>
         <div className={styles.card}>
           <h2 className={styles.cardTitle}>⚔ Sala de Espera</h2>
-          <p className={styles.playerCount}>{playerCount}/6 jogadores</p>
+          <p className={styles.playerCount}>{playerCount}/6 aventureiros presentes</p>
 
           <div className={styles.playerList}>
             {Object.values(gameState.players).map(p => (
@@ -41,7 +41,7 @@ export default function Lobby({ gameState, myId, onJoin }: Props) {
             {Array.from({ length: Math.max(0, 1 - playerCount) }).map((_, i) => (
               <div key={i} className={styles.playerRowEmpty}>
                 <span className={styles.playerDotEmpty} />
-                <span className={styles.playerNameEmpty}>Aguardando jogador...</span>
+                <span className={styles.playerNameEmpty}>Aguardando aventureiro...</span>
               </div>
             ))}
           </div>
@@ -51,7 +51,7 @@ export default function Lobby({ gameState, myId, onJoin }: Props) {
               <input
                 className={styles.input}
                 type="text"
-                placeholder="Seu nome de guerreiro..."
+                placeholder="Seu nome de guerra..."
                 value={name}
                 onChange={e => setName(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' && name.trim() && onJoin(name.trim())}
@@ -62,7 +62,7 @@ export default function Lobby({ gameState, myId, onJoin }: Props) {
                 onClick={() => name.trim() && onJoin(name.trim())}
                 disabled={!name.trim()}
               >
-                Entrar na Batalha
+                Entrar nos Mortos
               </button>
             </div>
           ) : (
@@ -71,14 +71,15 @@ export default function Lobby({ gameState, myId, onJoin }: Props) {
         </div>
 
         <div className={styles.infoCard}>
-          <h3 className={styles.infoTitle}>📜 Como Jogar</h3>
+          <h3 className={styles.infoTitle}>📜 Atenção Viajantes!</h3>
           <ul className={styles.infoList}>
-            <li>1-6 jogadores se unem e escolhem suas classes</li>
-            <li>6 classes disponíveis desde o início: Guerreiro, Mago, Ladino, Necromante, Paladino e Arqueiro</li>
-            <li>Explore 7 mapas com dificuldade crescente</li>
-            <li>Combate em turnos: cada jogador age um por vez</li>
-            <li>A loja abre a cada 3 turnos — todos devem clicar em Pronto para continuar</li>
-            <li>⚠️ Progresso é perdido se o servidor reiniciar</li>
+            <li>1–6 aventureiros unem-se e escolhem suas classes</li>
+            <li>12 classes únicas — cada uma exclusiva por jogador</li>
+            <li>Explore 12 mapas com dificuldade crescente</li>
+            <li>Combate em turnos: cada herói age um por vez</li>
+            <li>A loja abre periodicamente — todos devem confirmar para continuar</li>
+            <li>Derrote o Deus Corrompido para desbloquear a Transformação</li>
+            <li>⚠️ Progresso perdido se o servidor reiniciar</li>
           </ul>
         </div>
       </div>
