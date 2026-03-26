@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --bg-deepest: #050508;
+  --bg-deep: #0a0a12;
+  --bg-dark: #0f0f1a;
+  --bg-mid: #141428;
+  --bg-panel: #1a1a30;
+  --bg-card: #1e1e35;
+  --bg-hover: #252540;
+
+  --border-dim: #2a2a4a;
+  --border-mid: #3a3a60;
+  --border-bright: #5a5a8a;
+  --border-glow: #7070b0;
+
+  --text-primary: #e8e4d8;
+  --text-secondary: #9090b0;
+  --text-dim: #5a5a7a;
+  --text-gold: #d4a017;
+  --text-gold-bright: #f0c040;
+
+  --accent-red: #c0392b;
+  --accent-red-bright: #e74c3c;
+  --accent-blue: #2980b9;
+  --accent-blue-bright: #3498db;
+  --accent-green: #27ae60;
+  --accent-green-bright: #2ecc71;
+  --accent-purple: #8e44ad;
+  --accent-purple-bright: #9b59b6;
+  --accent-gold: #d4a017;
+  --accent-gold-bright: #f0c040;
+  --accent-teal: #16a085;
+  --accent-teal-bright: #1abc9c;
+
+  --hp-color: #e74c3c;
+  --mp-color: #3498db;
+  --xp-color: #f39c12;
+
+  --font-display: 'Cinzel', serif;
+  --font-body: 'Crimson Text', serif;
+  --font-ui: system-ui, sans-serif;
+
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.5);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.6);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.8);
+  --glow-gold: 0 0 20px rgba(212,160,23,0.3);
+  --glow-red: 0 0 20px rgba(231,76,60,0.3);
+  --glow-blue: 0 0 20px rgba(52,152,219,0.3);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg-deepest);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+}
+
+button {
+  font-family: var(--font-display);
+  cursor: pointer;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border-bright); }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; text-shadow: 0 0 10px currentColor; }
+  50% { opacity: 0.85; text-shadow: 0 0 20px currentColor; }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes dmgPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
