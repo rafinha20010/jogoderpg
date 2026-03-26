@@ -40,7 +40,7 @@
 .mapName {
   font-family: var(--font-display);
   font-size: 15px;
-  color: var(--text-gold);
+  color: var(--accent-red-bright);
   letter-spacing: 0.08em;
 }
 
@@ -48,18 +48,20 @@
   font-family: var(--font-ui);
   font-size: 12px;
   color: var(--text-secondary);
-  background: var(--bg-dark);
+  background: #1d1010;
   padding: 3px 10px;
   border-radius: 12px;
+  border: 1px solid var(--border-mid);
 }
 
 .wave {
   font-family: var(--font-ui);
   font-size: 12px;
-  color: var(--accent-blue-bright);
-  background: rgba(52,152,219,0.1);
+  color: #ffbbbb;
+  background: rgba(200,30,30,0.15);
   padding: 3px 10px;
   border-radius: 12px;
+  border: 1px solid rgba(255,40,40,0.35);
 }
 
 .headerRight {
